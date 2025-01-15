@@ -1,10 +1,13 @@
-{
+{"homepage": "https://Appajibj78104.github.io/webproject",
   "name": "aat-tool",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
+    
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node backend/server.js",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build",
     "build": "cd frontend && npm install && npm run build && cd ../backend && npm install",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run build"
   },
